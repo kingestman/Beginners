@@ -22,4 +22,13 @@ body {
     width: 1px;
     height: 1px;
     overflow: hidden;
+
+    &:focus {
+        left: 0px;
+        width: auto;
+        height: auto;
+        border: 1px solid;
+        padding: 0.5rem;
+        background-color: #fff;
+    }
 }
