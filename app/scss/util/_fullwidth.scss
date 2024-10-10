@@ -1,0 +1,9 @@
+// %fullwidth {
+//     color: var(--text-light);
+//     text-align: center;
+// }
+
+@mixin fullwidth {
+    color: var(--text-light);
+    text-align: center;
+}

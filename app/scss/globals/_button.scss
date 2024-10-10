@@ -21,6 +21,18 @@
         &:hover {
             background-color: var(--buttom-primary-bg-hover);
             border: u.rem(2) solid var(--buttom-primary-bg-hover);
+            color: var(--button-primary-text);
+        }
+
+        &.white {
+            background-color: var(--buttom-primary-white-bg);
+            color: var(--text-dark);
+            border: u.rem(2) solid var(--buttom-primary-white-bg);
+
+            &:hover {
+                background-color: var(--buttom-primary-white-bg-hover);
+                border: u.rem(2) solid var(--buttom-primary-white-bg-hover);
+            }
         }
     }
 

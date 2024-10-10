@@ -1,9 +1,8 @@
 @use '../util/' as u;
 
 .fw-feature {
+    @include u.fullwidth;
     background-color: var(--fullwidth-bg);
-    color: var(--text-light);
-    text-align: center;
 
     &__title {
         line-height: 1.1;
