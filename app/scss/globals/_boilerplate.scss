@@ -37,6 +37,15 @@ img {
     width: 100%;
     height: auto;
 }
+header ul,
+footer ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+        list-style-type: none;
+    }
+}
 figure,
 blockquote {
     margin: 0;
