@@ -44,11 +44,23 @@
         font-weight: bold;
         letter-spacing: 0.05em;
         font-size: u.rem(14);
+        display: block;
 
-        &:hover {
-            text-decoration: underline;
-            text-decoration-thickness: 2px;
-            text-underline-offset: 4px;
+        &::after {
+            content: '';
+            display: block;
+            opacity: 0;
+            height: 3.2px;
+            background: linear-gradient(
+                0.25turn,
+                var(--link-gradient1) 0%,
+                var(--link-gradient2) 82%
+            );
+            transition: opacity 0.2s ease;
+        }
+
+        &:hover::after {
+            opacity: 1;
         }
 
         @include u.breakpoint(large) {
