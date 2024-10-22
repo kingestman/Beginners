@@ -1,36 +1,46 @@
 @use '../util' as u;
 .hero {
-    background-color: var(--hero-bg);
-    &__wrapper {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        padding-block: 30px 60px;
-        gap: 40px;
+    --wave-height: clamp(
+        1.3125rem,
+        0.014084507042253502rem + 5.539906103286385vw,
+        5rem
+    );
 
+    background-color: var(--hero-bg);
+    color: var(--text-light);
+    padding-block-start: 40px;
+
+    &__content {
+        display: grid;
+        gap: 40px;
+        margin-block-end: calc(60px + var(--wave-height));
         @include u.breakpoint(large) {
-            flex-direction: row-reverse;
-            padding-block: 40px 80px;
-            gap: 11%;
+            grid-template-columns: 6fr 5fr;
+            margin-block-end: 0;
         }
     }
 
+    &__wave {
+        height: clamp(
+            1.3125rem,
+            0.014084507042253502rem + 5.539906103286385vw,
+            5rem
+        );
+    }
     &__image {
         width: 61%;
-        max-width: 380px;
+        max-width: 483px;
+        justify-self: center;
 
         @include u.breakpoint(large) {
-            flex: 1;
-            max-width: 483px;
+            width: 100%;
+            order: 2;
+            justify-self: end;
         }
     }
 
     &__text {
         color: var(--text-light);
-
-        @include u.breakpoint(large) {
-            flex: 1 1 200px;
-        }
     }
 
     &__button {
